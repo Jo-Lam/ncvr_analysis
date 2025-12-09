@@ -7,7 +7,7 @@ from scipy import stats
 from scipy.stats import entropy
 import seaborn as sns
 
-df_fn = pd.read_csv(r"C:\Users\uctvjla\OneDrive - University College London\Documents\GitHub\IPDLN-24\ncvr\output\name_similarity\20250422_updated_fn_similarity.csv")
+df_fn = pd.read_csv(r"\name_similarity\20250422_updated_fn_similarity.csv")
 
 df_subset = df_fn[df_fn['first_name_similarity_score']>= 0.7]
 
@@ -23,7 +23,7 @@ plt.yticks(fontsize = 14)
 plt.show()
 
 
-df_ln = pd.read_csv(r"C:\Users\uctvjla\OneDrive - University College London\Documents\GitHub\IPDLN-24\ncvr\output\name_similarity\20250422_updated_ln_similarity.csv")
+df_ln = pd.read_csv(r"name_similarity\20250422_updated_ln_similarity.csv")
 df_ln_nozero = df_ln[df_ln['last_name_similarity_score'] > 0]
 
 plt.figure(figsize=(16, 8))
@@ -51,4 +51,5 @@ plt.show()
 #plt.title("Cumulative Density of Last Name Mismatches, by Race")
 
 #plt.savefig("fig3b.svg", format="svg",dpi=300)
+
 
